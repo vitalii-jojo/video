@@ -1,5 +1,5 @@
 .section--hero {
-    background: url(/img/pexels-souvenirpixels-417074.jpg);
+    background: url(../../img/pexels-souvenirpixels-417074.jpg);
     background-size: cover;
     background-position: 50%;
     width: 100%;
@@ -34,7 +34,7 @@
     position: relative;
 
     .play_main{
-      background-image: url(/img/play.svg);
+      background-image: url(../../img/play.svg);
       background-position: center;
       background-size: cover;
       width: 8rem;
@@ -64,7 +64,7 @@
 
 
       #play {
-        background-image: url(/img/play.svg);
+        background-image: url(../../img/play.svg);
         background-position: center;
         background-size: cover;
         width: 3rem;
@@ -77,7 +77,7 @@
         }
 
         &.paused {
-          background-image: url(/img/pause.svg);
+          background-image: url(../../img/pause.svg);
         }
       }
       #volume {
