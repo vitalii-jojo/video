@@ -9,8 +9,7 @@
   <body>
     <div class="wrapper">
       <header id="head" class="header">
-        <div class="container container--header">
-        </div>
+        <div class="container container--header"></div>
       </header>
 
       <main class="main">
@@ -19,32 +18,58 @@
             <h1 class="hero_title">Video via video tag</h1>
             <div class="video_w">
               <video
+                id="video1"
                 src="./data/video/videoplayback.mp4"
-                controls muted
-                poster="./data/img/Hopetoun_falls.jpg"
+                poster="./img/Hopetoun_falls.jpg"
                 width="100%"
                 height="100%"
               >
-                Video dosnt work <br>
+                Video dosnt work <br />
                 <a href="./data/video/videoplayback.mp4">download it</a>
               </video>
+
+              <div class="play_main"></div>
+
+              <div class="controls">
+                <div id="play" class=""></div>
+                <input
+                  id="volume"
+                  type="range"
+                  min="0"
+                  max="1"
+                  step="0.1"
+                  value="0.2"
+                  class="slider"
+                />
+              </div>
             </div>
           </div>
         </section>
 
-        <section class="section section--reputation">
-          <div class="container container--reputation"></div>
+        <section class="section section--iframe">
+          <div class="container container--iframe">
+            <h1 class="hero_title">Video via iframe</h1>
+            <div class="iframe_w">
+              <div class="poster">
+                <div class="play_main2"></div>
+              </div>
+            <iframe
+              id="player"
+              width="100%"
+              height="100%"
+              src="https://www.youtube.com/embed/KJwYBJMSbPI?si=NvvLUCiOXh8ZpQSO&controls=1&color=white&fs=0&iv_load_policy=3&rel=0"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture;"
+              referrerpolicy="strict-origin-when-cross-origin"
+              allowfullscreen
+            ></iframe>
+          </div>
+          </div>
         </section>
       </main>
 
       <footer class="footer">
-        <section class="section section--footer">
-          <div class="container container--footer">
-            <div class="footer_last">
-              TheBox Company © 2022. All Rights Reserved
-            </div>
-          </div>
-        </section>
       </footer>
     </div>
     <script src="./app/js-min/script.min.js"></script>

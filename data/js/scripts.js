@@ -1,26 +1,40 @@
-window.onscroll = function () {
-  scrollFunction();
-};
+// vedeo tag
+const play = document.getElementById("play");
+const video = document.getElementById("video1");
+const volume = document.getElementById("volume");
+const playMain = document.querySelector(".play_main")
+const controls = document.querySelector(".controls")
 
-function scrollFunction() {
-  if (
-    document.body.scrollTop > 100 ||
-    document.documentElement.scrollTop > 100
-  ) {
-    document.querySelector(".nav_top").classList.add("visible");
+playMain.addEventListener("click", function(){
+  playMain.style.display = "none";
+  video.play()
+  play.classList.add("paused")
+  controls.style.display = "flex"
+})
+
+play.addEventListener("click" , function(){
+  if (video.paused) {
+    video.play()
+    play.classList.add("paused")
+    playMain.style.display = "none";
   } else {
-    document.querySelector(".nav_top").classList.remove("visible");
-  }
-}
-
-const btn = document.querySelector(".nav_btn");
-const menu = document.querySelector(".menu")
-btn.addEventListener("click", function(){
-  menu.classList.toggle("active");
-
-  if (menu.classList.contains("active")) {
-    btn.classList.add("act");
-  } else {
-    btn.classList.remove("act");
+    video.pause()
+    play.classList.remove("paused")
+    playMain.style.display = "block";
   }
 })
+
+
+volume.addEventListener("input", function() {
+  video.volume = volume.value
+})
+
+// iframe video
+
+const playMain2 = document.querySelector(".poster");
+const player = document.getElementById("player");
+
+playMain2.addEventListener("click", function(){
+  playMain2.style.display="none";
+  player.src += "&autoplay=1";
+});

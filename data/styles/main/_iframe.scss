@@ -1,0 +1,69 @@
+.section--iframe {
+    background: url(/img/0aaa.jpg);
+    background-size: cover;
+    background-position: 50%;
+    width: 100%;
+    min-height: 64.6rem;
+    position: relative;
+    z-index: 0;
+
+    &::before {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: rgba(0, 0, 0, 0.5);
+      z-index: -1;
+    }
+  }
+
+.container--iframe {
+    max-width: 127.6rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 5rem;
+}
+
+
+.iframe_w {
+    max-width: 90rem;
+    width: 100%;
+    margin: 0 auto;
+    height: 50rem;
+    position: relative;
+
+
+    .poster {
+        position: absolute;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: url(/img/Hopetoun_falls.jpg);
+        background-position: center;
+        background-size: cover;
+        
+        .play_main2{
+            background-image: url(/img/play.svg);
+            background-position: center;
+            background-size: cover;
+            width: 8rem;
+            height: 8rem;
+            opacity: 0.7;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            transition: opacity .2s;
+          
+            &:hover {
+                opacity: 1;
+            }
+          }
+    }
+}
