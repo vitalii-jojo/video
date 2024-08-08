@@ -1,0 +1,31 @@
+:root {
+font-size: 10px;
+}
+
+body,
+html {
+  height: 100%;
+  font-family: Work Sans;
+  scroll-behavior: smooth;
+}
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  max-width: 100%;
+}
+.section {
+  padding: 10rem 0;
+  width: 100%;
+  // overflow: hidden;
+}
+.container {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 3rem;
+}
+/* MAIN */
+.main {
+    flex-grow: 1;
+    width: 100%;
+  }

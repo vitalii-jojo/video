@@ -1,0 +1,83 @@
+@mixin btn {
+    display: inline-block;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    white-space: nowrap;
+    cursor: pointer;
+    text-decoration: none;
+
+}
+@mixin size ($width, $height, $Fsize, $Fweight, $Lheight) {
+    max-width: $width;
+    min-height: $height; 
+    font-size: $Fsize;
+    font-weight: $Fweight;
+    line-height: $Lheight;
+    
+}
+
+
+// -------------------
+
+%transp_btn {
+    @include btn();
+    @include size(23.2rem, 5.3rem, 1.8rem, 600, 2.11rem);
+    color: $white;
+    padding: 1.6rem 2rem;
+    border-radius: 2px;
+    border: 2px solid $white;
+}
+
+%blue_btn {
+        @include btn();
+        @include size(27.1rem, 5.3rem, 1.8rem, 600, 2.11rem);
+        color: $white;
+        background-color: $blue;
+        padding: 1.6rem 2rem;
+        border-radius: 2px;
+
+}
+
+%navigation_btn {
+
+    @include btn();
+    @include size(50%, 100%, 1.8rem, 400, 2.1rem);
+    display: flex !important;
+    color: $white;  
+    width: 50%;
+    background: #292E3D;
+}
+
+%navigation_btn2 {
+
+    @include btn();
+    @include size(29.5rem, 6.4rem, 1.8rem, 400, 2.1rem);
+    display: flex !important;
+    color: $white;  
+    width: 100%;
+    background: #292E3D;
+}
+
+%white_btn {
+
+    @include btn();
+    @include size(27.1rem, 5.3rem, 1.8rem, 600, 2.11rem);
+    color: $blue;
+    background-color: $white;
+    padding: 1.6rem 2rem;
+    border-radius: 2px;
+}
+
+
+
+%orange_btn {
+    @include btn();
+    @include size(13.6rem, 4.1rem, 1.8rem, 600, 2.11rem);
+    width: 100%;
+    color: $white;
+    background-color: #F9995D;
+    padding: 0 2rem;
+    border-radius: 0.4rem;
+
+}
